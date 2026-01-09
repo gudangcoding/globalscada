@@ -19,6 +19,6 @@ Fitur yang disertakan:
 1. **Desain Responsif**: Tampilan menyesuaikan Desktop dan Mobile.
 2. **Animasi Interaktif**: Elemen muncul saat di-scroll.
 3. **Glassmorphism**: Efek transparan modern pada kartu layanan.
-4. **Formulir Kontak**: Mockup formulir (frontend only).
+5. **WhatsApp Integration**: Tombol kontak langsung mengarah ke chat WhatsApp.
 
 Silakan edit bagian teks di `index.html` untuk menyesuaikan dengan visi misi perusahaan yang sebenarnya.

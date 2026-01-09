@@ -70,7 +70,9 @@
                 <a href="#about" class="hover:text-brand-cyan transition-colors">Tentang Kami</a>
                 <a href="#services" class="hover:text-brand-cyan transition-colors">Layanan</a>
                 <a href="#projects" class="hover:text-brand-cyan transition-colors">Proyek</a>
-                <a href="#contact" class="px-5 py-2 border border-brand-cyan text-brand-cyan rounded hover:bg-brand-cyan hover:text-white transition-all duration-300">Hubungi Kami</a>
+                <a href="https://wa.me/6281277440380" target="_blank" class="px-5 py-2 border border-brand-cyan text-brand-cyan rounded hover:bg-brand-cyan hover:text-white transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>Hubungi Kami
+                </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -88,7 +90,7 @@
             <a href="#about" class="mobile-link hover:text-brand-cyan">Tentang Kami</a>
             <a href="#services" class="mobile-link hover:text-brand-cyan">Layanan</a>
             <a href="#projects" class="mobile-link hover:text-brand-cyan">Proyek</a>
-            <a href="#contact" class="mobile-link text-brand-cyan">Hubungi Kami</a>
+            <a href="https://wa.me/6281277440380" target="_blank" class="mobile-link text-brand-cyan">Hubungi Kami</a>
         </div>
     </nav>
 
@@ -109,8 +111,8 @@
                 <a href="#services" class="px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-cyan rounded font-bold text-white shadow-[0_0_20px_rgba(6,182,212,0.5)] hover:shadow-[0_0_30px_rgba(6,182,212,0.7)] transition-all transform hover:-translate-y-1">
                     Jelajahi Layanan
                 </a>
-                <a href="#contact" class="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur rounded font-bold text-white hover:bg-white/10 transition-all">
-                    Konsultasi Gratis
+                <a href="https://wa.me/6281277440380" target="_blank" class="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur rounded font-bold text-white hover:bg-white/10 transition-all">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>Konsultasi Gratis
                 </a>
             </div>
         </div>
@@ -135,7 +137,7 @@
                         <img src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Industrial Control Panel" class="rounded-2xl shadow-2xl border border-slate-700">
                         <div class="absolute -bottom-6 -right-6 bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl hidden md:block">
                             <div class="flex items-center gap-4">
-                                <div class="text-4xl font-display font-bold text-brand-cyan">10+</div>
+                                <div class="text-4xl font-display font-bold text-brand-cyan">30+</div>
                                 <div class="text-sm text-gray-400">Tahun<br>Pengalaman</div>
                             </div>
                         </div>
@@ -311,9 +313,10 @@
                                     <i class="fa-solid fa-phone text-brand-cyan"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-white">Telepon</h4>
-                                    <p class="text-gray-400 text-sm">+62 21 8990 XXXX</p>
-                                    <p class="text-gray-400 text-sm">+62 812 3456 XXXX (WhatsApp)</p>
+                                    <h4 class="font-bold text-white">Telepon / WhatsApp</h4>
+                                    <a href="https://wa.me/6281277440380" target="_blank" class="text-brand-cyan hover:underline block mt-1">
+                                        +62 812-7744-0380
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -336,37 +339,37 @@
 
                 <!-- Contact Form -->
                 <div class="lg:w-3/5 p-10">
-                    <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah kami terima.');" class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-2">Nama Lengkap</label>
-                                <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Anda">
+                                <input type="text" id="name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Anda" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-2">Perusahaan</label>
-                                <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Perusahaan">
+                                <input type="text" id="company" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Perusahaan">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                            <input type="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="email@perusahaan.com">
+                            <input type="email" id="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="email@perusahaan.com">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-400 mb-2">Layanan yang Diminati</label>
-                            <select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all">
-                                <option>Pilih Layanan</option>
-                                <option>SCADA System</option>
-                                <option>PLC Programming</option>
-                                <option>Panel Maker</option>
-                                <option>Konsultasi Umum</option>
+                            <select id="service" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all">
+                                <option value="Umum">Pilih Layanan</option>
+                                <option value="SCADA System">SCADA System</option>
+                                <option value="PLC Programming">PLC Programming</option>
+                                <option value="Panel Maker">Panel Maker</option>
+                                <option value="Konsultasi Umum">Konsultasi Umum</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-400 mb-2">Pesan</label>
-                            <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Ceritakan kebutuhan proyek Anda..."></textarea>
+                            <textarea id="message" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Ceritakan kebutuhan proyek Anda..."></textarea>
                         </div>
                         <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-blue to-brand-cyan rounded-lg font-bold text-white hover:shadow-lg hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1">
-                            Kirim Pesan
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Kirim Pesan via WhatsApp
                         </button>
                     </form>
                 </div>
@@ -392,9 +395,35 @@
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281277440380" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 group">
+        <i class="fa-brands fa-whatsapp text-4xl group-hover:rotate-12 transition-transform"></i>
+        <span class="absolute right-full mr-4 bg-white text-slate-900 px-3 py-1 rounded text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">Chat WhatsApp</span>
+    </a>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Form to WhatsApp Logic
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            const phoneNumber = '6281277440380';
+            
+            const text = `Halo Global Scada Perkasa,%0A%0ASaya ingin berkonsultasi mengenai proyek:%0A%0A*Nama:* ${name}%0A*Perusahaan:* ${company}%0A*Email:* ${email}%0A*Layanan:* ${service}%0A*Pesan:* ${message}%0A%0ATerima kasih.`;
+
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
         // Initialize AOS
         AOS.init({
             duration: 800,
