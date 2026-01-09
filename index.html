@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Global Scada Perkasa - Industrial Automation Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            blue: '#0ea5e9',
+                            cyan: '#06b6d4',
+                            accent: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tech-grid {
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-microchip text-brand-cyan text-3xl animate-pulse"></i>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-xl tracking-wider text-white">GLOBAL SCADA</span>
+                    <span class="text-xs text-brand-blue tracking-[0.2em] font-bold">PERKASA</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#home" class="hover:text-brand-cyan transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-brand-cyan transition-colors">Tentang Kami</a>
+                <a href="#services" class="hover:text-brand-cyan transition-colors">Layanan</a>
+                <a href="#projects" class="hover:text-brand-cyan transition-colors">Proyek</a>
+                <a href="#contact" class="px-5 py-2 border border-brand-cyan text-brand-cyan rounded hover:bg-brand-cyan hover:text-white transition-all duration-300">Hubungi Kami</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-slate-900/95 z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 text-xl md:hidden">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-gray-400 hover:text-white">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <a href="#home" class="mobile-link hover:text-brand-cyan">Beranda</a>
+            <a href="#about" class="mobile-link hover:text-brand-cyan">Tentang Kami</a>
+            <a href="#services" class="mobile-link hover:text-brand-cyan">Layanan</a>
+            <a href="#projects" class="mobile-link hover:text-brand-cyan">Proyek</a>
+            <a href="#contact" class="mobile-link text-brand-cyan">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center hero-bg">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="inline-block px-4 py-1 mb-4 border border-brand-blue/30 rounded-full bg-brand-blue/10 backdrop-blur-sm" data-aos="fade-down" data-aos-delay="100">
+                <span class="text-brand-cyan text-sm tracking-widest font-bold uppercase">Industrial Automation Experts</span>
+            </div>
+            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                Solusi Cerdas untuk <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Industri Masa Depan</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="400">
+                PT Global Scada Perkasa menghadirkan integrasi sistem SCADA, PLC, dan IoT terdepan untuk efisiensi dan kontrol maksimal pabrik Anda.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
+                <a href="#services" class="px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-cyan rounded font-bold text-white shadow-[0_0_20px_rgba(6,182,212,0.5)] hover:shadow-[0_0_30px_rgba(6,182,212,0.7)] transition-all transform hover:-translate-y-1">
+                    Jelajahi Layanan
+                </a>
+                <a href="#contact" class="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur rounded font-bold text-white hover:bg-white/10 transition-all">
+                    Konsultasi Gratis
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/50 hover:text-white transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-brand-blue/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Industrial Control Panel" class="rounded-2xl shadow-2xl border border-slate-700">
+                        <div class="absolute -bottom-6 -right-6 bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl hidden md:block">
+                            <div class="flex items-center gap-4">
+                                <div class="text-4xl font-display font-bold text-brand-cyan">10+</div>
+                                <div class="text-sm text-gray-400">Tahun<br>Pengalaman</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Mengapa Memilih <span class="text-brand-cyan">Global Scada Perkasa</span>?</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Kami adalah mitra strategis dalam transformasi digital industri Anda. Fokus kami adalah menyediakan sistem kontrol yang andal, efisien, dan terukur. Dari desain konseptual hingga commissioning, tim engineer kami berdedikasi untuk memberikan solusi SCADA dan Otomasi kelas dunia.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-cyan mt-1"></i>
+                            <span class="text-gray-300">Integrasi Sistem Komprehensif (PLC, HMI, SCADA)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-cyan mt-1"></i>
+                            <span class="text-gray-300">Monitoring Real-time & Analisis Data</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-cyan mt-1"></i>
+                            <span class="text-gray-300">Dukungan Teknis 24/7 & Maintenance</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-brand-cyan font-bold hover:text-brand-blue transition-colors flex items-center gap-2 group">
+                        Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-800 tech-grid relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-brand-blue font-bold tracking-widest uppercase text-sm">Layanan Kami</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mt-2">Solusi End-to-End Automation</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-network-wired text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">SCADA Systems</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Desain dan implementasi sistem SCADA untuk monitoring dan kontrol terpusat, memberikan visibilitas penuh terhadap operasi pabrik Anda.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-microchip text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">PLC Programming</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Pemrograman Logic Controller (PLC) yang presisi untuk berbagai brand (Siemens, Allen-Bradley, Schneider, Omron) guna memastikan logika kontrol yang handal.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-desktop text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">HMI Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Antarmuka pengguna (Human Machine Interface) yang intuitif dan ergonomis, memudahkan operator dalam mengawasi dan mengendalikan mesin.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-bolt text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Panel Maker</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Perakitan panel kontrol (Control Panel) berkualitas tinggi, rapi, dan sesuai standar keselamatan industri (PUIL/IEC).
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-wifi text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Industrial IoT</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Integrasi sensor cerdas dan cloud computing untuk predictive maintenance dan analitik data tingkat lanjut (Industry 4.0).
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-brand-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue/30 transition-colors">
+                        <i class="fa-solid fa-headset text-2xl text-brand-cyan"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Maintenance & Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Layanan purna jual, troubleshooting, dan kontrak pemeliharaan berkala untuk meminimalisir downtime produksi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-brand-blue/10 border-y border-slate-700">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="zoom-in">
+                    <div class="text-4xl font-display font-bold text-white mb-2">50+</div>
+                    <div class="text-brand-cyan text-sm uppercase tracking-wider">Proyek Selesai</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl font-display font-bold text-white mb-2">30+</div>
+                    <div class="text-brand-cyan text-sm uppercase tracking-wider">Klien Puas</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl font-display font-bold text-white mb-2">100%</div>
+                    <div class="text-brand-cyan text-sm uppercase tracking-wider">Komitmen Kualitas</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl font-display font-bold text-white mb-2">24/7</div>
+                    <div class="text-brand-cyan text-sm uppercase tracking-wider">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-slate-700">
+                
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 bg-gradient-to-br from-brand-dark to-slate-800 p-10 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full bg-tech-pattern opacity-10"></div>
+                    
+                    <div class="relative z-10">
+                        <h2 class="font-display text-3xl font-bold mb-6">Mulai Proyek Anda</h2>
+                        <p class="text-gray-400 mb-10">
+                            Siap mengoptimalkan industri Anda? Hubungi kami untuk konsultasi gratis mengenai kebutuhan sistem SCADA dan otomatisasi Anda.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-blue/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot text-brand-cyan"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Alamat Kantor</h4>
+                                    <p class="text-gray-400 text-sm">Jl. Industri Raya No. 88, Cikarang, Bekasi, Jawa Barat, Indonesia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-blue/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope text-brand-cyan"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Email</h4>
+                                    <p class="text-gray-400 text-sm">info@globalscadaperkasa.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-blue/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-brand-cyan"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Telepon</h4>
+                                    <p class="text-gray-400 text-sm">+62 21 8990 XXXX</p>
+                                    <p class="text-gray-400 text-sm">+62 812 3456 XXXX (WhatsApp)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative z-10 mt-10">
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-all">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-all">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-all">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-3/5 p-10">
+                    <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah kami terima.');" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Nama Lengkap</label>
+                                <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Perusahaan</label>
+                                <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Nama Perusahaan">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="email@perusahaan.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Layanan yang Diminati</label>
+                            <select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all">
+                                <option>Pilih Layanan</option>
+                                <option>SCADA System</option>
+                                <option>PLC Programming</option>
+                                <option>Panel Maker</option>
+                                <option>Konsultasi Umum</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all" placeholder="Ceritakan kebutuhan proyek Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-blue to-brand-cyan rounded-lg font-bold text-white hover:shadow-lg hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center gap-2 mb-4 md:mb-0">
+                    <i class="fa-solid fa-microchip text-brand-cyan text-2xl"></i>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-lg tracking-wider text-white">GLOBAL SCADA</span>
+                        <span class="text-[0.6rem] text-brand-blue tracking-[0.2em] font-bold">PERKASA</span>
+                    </div>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    &copy; 2024 PT Global Scada Perkasa. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body>
+</html>
